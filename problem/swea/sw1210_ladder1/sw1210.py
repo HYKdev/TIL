@@ -1,5 +1,7 @@
 # Ladder1
-
+import sys
+from pprint import pprint
+sys.stdin = open('input.txt')
 # 테스트 케이스
 T = 10
 
@@ -25,7 +27,7 @@ for test_case in range(1,T+1):
                 j -= 1
                 if data[i][j-1] == 0:
                     break
-        
+
         # 우 조건 및 위 조건 나올때 까지 진행
         elif data[i][j+1] == 1:
             while True:
