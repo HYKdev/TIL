@@ -9,6 +9,7 @@ T = int(input())
 for tc in range(1, T + 1):
     N = int(input())
     numbers = list(map(int, input()))
+    
 # 출력에 들어갈 값 카드번호와 갯수를 리스트 2개로 나눠서 저장
 # 입력 값에 대응하는 카운트 리스트 생성
     ans = [0, 0]

@@ -2,6 +2,7 @@ import sys
 
 sys.stdin = open('input.txt')
 
+# 최대 길이가 짝수인 회문 탐색
 def max_circular_even(lst):
     max_len = 0
     for i in range(len(lst) - 1):
@@ -10,7 +11,7 @@ def max_circular_even(lst):
             cnt += 2
             j = 1
             while i + j + 1 < len(lst):
-                if i-j >= 0 and lst[i - j] == lst[i + j + 1]:
+                if i-j >= 0 and lst[i - j] == lst[i + 1 + j]:
                     cnt += 2
                     j += 1
                 else:
@@ -19,7 +20,7 @@ def max_circular_even(lst):
             max_len = cnt
     return max_len
 
-
+# 최대 길이가 홀수인 회문 탐색
 def max_circulat_odd(lst):
     max_len = 0
     for i in range(len(lst)):
@@ -35,31 +36,30 @@ def max_circulat_odd(lst):
             max_len = cnt
     return max_len
 
+# 최댓값 비교 함수
+def max_test(lst):
+# 글로벌 변수를 선언하여 마음대로 사용
+    global ans
+    for i in range(100):
+        max_even = max_circular_even(lst[i])
+        if max_even > ans:
+            ans = max_even
+        max_odd = max_circulat_odd(lst[i])
+        if max_odd > ans:
+            ans = max_odd
+
+    return ans
+
 # 테스트 케이스 입력
 for tc in range(1, 11):
     n = int(input())
     arr = [list(map(str, input())) for _ in range(100)]
     ans = 0
+# transpose
+    col_lst = list(map(list, zip(*arr)))
 
-# 최대 값 비교
-    for i in range(100):  # 행 회문 판별
-        max_even = max_circular_even(arr[i])
-        if max_even > ans:
-            ans = max_even
-        max_odd = max_circulat_odd(arr[i])
-        if max_odd > ans:
-            ans = max_odd
-
-# 최대 값 비교
-    for j in range(100):  # 열 회문 판별
-        col_lst = []
-        for i in range(100):
-            col_lst.append(arr[i][j])
-        max_even = max_circular_even(col_lst)
-        if max_even > ans:
-            ans = max_even
-        max_odd = max_circulat_odd(col_lst)
-        if max_odd > ans:
-            ans = max_odd
+# 최대 값 함수 호출
+    max_test(arr)
+    max_test(col_lst)
 
     print(f'#{tc} {ans}')
