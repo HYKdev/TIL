@@ -22,11 +22,11 @@ for tc in range(1, T + 1):
 # 최댓값 초기화
     max_sum = 0
 
-# 최댓값 비교하여 최댓값 산출
+최댓값 비교하여 최댓값 산출
+
     for x in range(n-m+1):
         for y in range(n-m+1):
             if max_sum < sum_fly(x, y):
                 max_sum = sum_fly(x, y)
 
     print(f'#{tc} {max_sum}')
-

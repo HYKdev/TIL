@@ -48,7 +48,7 @@ for test_case in range(1,T+1):
 # 인덱스 값을 통해서 가로 세로 길이 및 넓이를 리스트로 만든 후 sort 정렬
     answer_list = []
     for p_p in p_top:
-        answer_list.append([height(p_p),width(p_p),width(p_p)*height(p_p)])
+        answer_list.append([height(p_p), width(p_p), width(p_p)*height(p_p)])
 
     answer_list = sorted(answer_list, key=lambda x: (x[2], x[0]))
 
