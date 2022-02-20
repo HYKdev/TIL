@@ -1,0 +1,24 @@
+ h1 {
+  color: pink;
+  font-size: 100px;
+}
+
+.my class{
+  color: black;
+  font-size: 125px;
+}
+
+#my_id{
+  color: red;
+  font-size: 50px;
+}
+
+button[type]{
+  background: yellow;
+}
+
+button[type="reset"]{ /* 속성과 속성값이 정확히 일치하는 요소 선택*/
+  background: yellow;
+}
+
+
