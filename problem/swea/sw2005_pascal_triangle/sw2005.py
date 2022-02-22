@@ -2,21 +2,24 @@ import sys
 
 sys.stdin = open('input.txt')
 
-1
-1 1
-1 2 1
-1 3 3 1
-1 4 6 4 1
-1 5 10 10 5 1
-1 6 15 20 15 6 1
-
+# 테스트 케이스 입력
 T = int(input())
 
 for tc in range(1, T + 1):
     n = int(input())
 
+# 10x10 행렬 선언
+    arr = [[1 for _ in range(10)] for _ in range(10)]
 
-    print(f'#{tc} ')
+# 파스칼 삼각형에 따른 행렬의 값 변환
+    for i in range(2, n):
+        for j in range(1, i):
+            arr[i][j] = arr[i-1][j-1] + arr[i-1][j]
+
+# 출력
+    print(f'#{tc}')
+    for i in range(n):
+        print(*arr[i][0:i+1])
 
 
 
