@@ -10,7 +10,7 @@ def check(j, i, key):
         for a in range(key):
             if (a+1)*(j+i-a) > key:
                 break
-        for b in range(i, i-1-a,-1):
+        for b in range(i, i-1-a, -1):
             i_sum += b*((-1)**(i-b))
         for c in range(j, j-1-a, -1):
             j_sum += c*((-1)**(j-c))

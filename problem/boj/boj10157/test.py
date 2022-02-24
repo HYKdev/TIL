@@ -1,4 +1,3 @@
-
 di = [0, 1, 0, -1]
 dj = [1, 0, -1, 0]
 
@@ -15,21 +14,28 @@ def check(a, b, c):
         while True:
             if cnt == c:
                 break
+
             matrix[i][j] = cnt
             cnt += 1
+
             for k in range(2):
                 d = (d+k) % 4
-                ni = i + di[k]
-                nj = j + dj[k]
-
-                if 0 <= ni < b and 0 <= nj < a and matrix[ni][nj] == 0:
+                ni = i + di[d]
+                nj = j + dj[d]
+                
+                if 0 <= ni < a and 0 <= nj < b and matrix[ni][nj] == 0:
                     i, j = ni, nj
                     break
-        return [i,j]
+        return [i+1, j+1]
 
 c, r = map(int, input().split())
 k = int(input())
-max_size = max(c, r)
-matrix = [[0 for _ in range(max_size)] for _ in range(max_size)]
 
-print(check(c,r,k))
+matrix = [[0 for _ in range(r)] for _ in range(c)]
+
+result = check(c, r, k)
+
+if result:
+    print(*result)
+else:
+    print(0)
