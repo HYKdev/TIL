@@ -4,7 +4,7 @@ import sys
 n = int(sys.stdin.readline())
 arr = []
 for _ in range(n):
-    data = input().split()
+    data = sys.stdin.readline().split()
     if data[0] == 'push':
         arr.append(data[1])
     elif data[0] == 'pop':
