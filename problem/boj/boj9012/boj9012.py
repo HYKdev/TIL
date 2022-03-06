@@ -2,7 +2,7 @@
 
 import sys
 
-n= int(sys.stdin.readline())
+# lst를 체크해서 괄호 조건이 맞으면 yes 아니면 종료하는 함수
 def check(lst):
     global result
     stack = []
@@ -17,6 +17,10 @@ def check(lst):
     if len(stack) == 0:
         result = 'YES'
     return
+
+#입력
+n= int(sys.stdin.readline())
+
 
 for _ in range(n):
     arr = sys.stdin.readline()

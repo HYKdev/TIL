@@ -101,3 +101,65 @@ Django 가이드 라인
 ​					127.0.0.1:8000
 
 IP(컴퓨터의 주소)			port(이 컴퓨터랑 프로그램이 소통하는 창구)
+
+
+
+## HTML Form
+
+action : 입력 데이터가 전송될 URL 지정
+
+method : 입력 데이터 전달 방식 지정
+
+- get - 
+- post - 
+
+input element
+
+- type 속성에 따라 동작 방식이 달라짐
+- ★ name - 양식을 제출했을 때 name이라는 이름에 설정된 값을 넘겨서 값을 가져올 수 있음
+- GET/POST 방식으로 서버에 전달하는 파라미터(name은 key, value는 value)로 매핑함
+- GET방식 URL => ~/dinner/?name=aiden&address=seoul [쿼리스트링]
+
+label element
+
+- input에 id속성 부여
+- label에는 input의 id와 동일한 값의 for속성이 필요
+
+HTTP
+
+request method 종류
+
+- **GET, POST,** PUT, DELETE ...
+
+
+
+GET
+
+- 서버로부터 정보를 조회하는데 사용
+- 데이터를 가져올 때만 사용해야 함
+- Query String Parameters를 통해 전송
+
+
+
+디폴트가 get방식
+
+
+
+URL
+
+- dispatcher(발송자, 운항 관리자) 로서의 URL
+- 
+
+variable Routing
+
+- 변수 값에 따라 하나의 path()에 여러 페이지를 연결 시킬 수 있음
+- 
+
+url path converters
+
+- str - 작성하지 않을 경우 기본값
+- int
+- slug
+
+★ include
+

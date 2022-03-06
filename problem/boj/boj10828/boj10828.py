@@ -1,10 +1,13 @@
 # 스택
 import sys
 
+#입력
 n = int(sys.stdin.readline())
 arr = []
 for _ in range(n):
     data = sys.stdin.readline().split()
+
+# push, pop, size, empty, top에 대한 각 조건에 대해 맞는 출력 조건문
     if data[0] == 'push':
         arr.append(data[1])
     elif data[0] == 'pop':
