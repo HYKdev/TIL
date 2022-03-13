@@ -12,8 +12,7 @@ def check(lst):
         stack.append(i)
     return result
 
-n = int( input() )
+n = int(input())
 arr = list(map(int, input().split()))
-
 
 print(*check(arr))

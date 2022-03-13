@@ -221,5 +221,9 @@ middleware
 
 
 
+variable routing
+
+
+
 ## Admin Site
 
