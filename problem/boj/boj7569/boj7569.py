@@ -5,7 +5,7 @@ from collections import deque
 
 M, N, H = map(int, input().split())
 dm = [0, 0, 1, -1, 0, 0]
-dn = [1, -1, 0, 0 ,0 ,0]
+dn = [1, -1, 0, 0, 0, 0]
 dh = [0, 0, 0, 0, 1, -1]
 tomato = []
 matrix = [[] for _ in range(H)]
@@ -14,7 +14,7 @@ for k in range(H):
         matrix[k].append(list(map(int, input().split())))
         for j in range(M):
             if matrix[k][i][j] == 1:
-                tomato.append([k,i,j])
+                tomato.append([k, i, j])
 
 
 def BFS():
@@ -34,7 +34,7 @@ def BFS():
                 q.append([nh,nn,nm])
                 matrix[nh][nn][nm] += matrix[h][n][m] + 1
     
-        cnt = matrix[h][n][m] -1
+        cnt = matrix[h][n][m] - 1
 
     for z in matrix:
         for x in z:
