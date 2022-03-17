@@ -1,16 +1,15 @@
 # 소수 구하기
 
 m ,n = map(int, input().split())
+n += 1
+count_list = [True]*n
 
-count_list = [True for _ in range(n+1)]
-
-n_sqrt = int(n**0.5)
-for i in range(2,n_sqrt+1):
-    if count_list[i] == True:
-        for j in range(i+i, n, i):
+for i in range(2, int(n**0.5)+1):
+    if count_list[i]:
+        for j in range(2*i, n, i):
             count_list[j] = False
 
 for i in range(m, n):
-    if count_list[i] == True:
+    if i > 1 and count_list[i] == True:
         print(i)
 
