@@ -20,6 +20,7 @@ def BFS():
 
         for i in graph[point]:
             if not visited[i]:
+                print(visited)
                 visited[i] = visited[point] + 1
                 q.append(i)
 
@@ -36,6 +37,7 @@ for tc in range(1, T + 1):
         a, b = map(int, input().split())
         graph[a].append(b)
         graph[b].append(a)
+
     start, end = map(int, input().split())
 
     print(f'#{tc} {BFS()}')

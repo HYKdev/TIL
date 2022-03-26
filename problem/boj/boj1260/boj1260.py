@@ -21,7 +21,6 @@ def bfs(n):
                 queue.append(i)
                 visited[i] = True
 
-
 input = sys.stdin.readline
 
 N, M, V = map(int, input().split())
@@ -40,6 +39,5 @@ dfs(V)
 
 print()
 visited = [False for _ in range(N+1)]
+
 bfs(V)
-
-
