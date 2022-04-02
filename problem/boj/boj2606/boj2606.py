@@ -9,7 +9,6 @@ def dfs(n):
         if not visited[i]:
             dfs(i)
 
-
 def BFS(n):
     q = deque()
     visited[n] = True

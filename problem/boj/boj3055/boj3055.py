@@ -51,8 +51,6 @@ def BFS():
                         if matrix[nib][njb] == 'D':
                             return visited[ib][jb]
 
-
-
     result = 'KAKTUS'
     return result
 

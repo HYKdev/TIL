@@ -86,18 +86,3 @@ for tc in range(1, T + 1):
     postorder(start_node)
     print()
     print('===후위 순회 끝===')
-
-
-    # graph = [[] for _ in range(n)]
-    #
-    # graph[1].extend([2, 3])
-    # graph[2].extend([4])
-    # graph[3].extend([5, 6])
-    # graph[4].extend([7])
-    # graph[5].extend([8, 9])
-    # graph[6].extend([10, 11])
-    # graph[7].extend([12])
-    # graph[11].extend([13])
-    # for i in range(len(graph)):
-    #     for j in range(len(graph[i])):
-    #         print(i, graph[i][j], end=' ')

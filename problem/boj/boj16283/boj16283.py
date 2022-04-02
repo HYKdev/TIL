@@ -10,4 +10,3 @@ if len(arr) == 1:
     print(arr[0][0],arr[0][1])
 else:
     print(-1)
-
