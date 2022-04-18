@@ -12,19 +12,18 @@ k = int(input())
 apple_info = []
 for _ in range(k):
     r, c = map(int, input().split())
-    apple_info.append([r, c])
+    apple_info.append([r-1, c-1])
 
 # 뱀의 정보 받기
 L = int(input())
-snake_move_time = []
 snake_move = {}
 for _ in range(L):
     x, c = input().split()
-    snake_move_time.append(int(x))
+    snake_move[int(x)] = c
     
+print(snake_move.keys())
 
-snake = [[1,1]]
+snake = [[0,0]]
 snake_direct = 0
 time = 0
-while True:
-    if time in snake_move_time:
+
